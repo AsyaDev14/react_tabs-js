@@ -1,4 +1,4 @@
-export const Tabs = ({ tabs, activeTabId, selected}) => {
+export const Tabs = ({ tabs, activeTabId, tabSelected }) => {
   const tabIdActive = tabs.find(tab => tab.id === activeTabId) || tabs[0];
 
   return (
@@ -16,7 +16,7 @@ export const Tabs = ({ tabs, activeTabId, selected}) => {
                 data-cy="TabLink"
                 onClick={() => {
                   if (tab.id !== activeTabId) {
-                    selected(tab.id);
+                    tabSelected(tab.id);
                   }
                 }}
               >
